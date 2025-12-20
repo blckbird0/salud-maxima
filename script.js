@@ -1,33 +1,19 @@
 // AFFILIATE LINK
-const affiliateLink =
-  "https://uh8f8d208auh.axdsz.pro/?rid=-7EBNQCgQAAHCwWwYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx";
+const AFFILIATE_URL =
+  "https://uh8f8d208auh.uewhbgfvds.cc/?rid=-7EBNQCgQAAHCsWwYABgEBEREKEQkKEQ1CEQ0SAAF_YWRjb21ibwEx";
 
-// CTA
+// CTA redirect
 function goToAffiliate() {
-  window.location.href = affiliateLink;
+  window.location.href = AFFILIATE_URL;
 }
-
-// COOKIE
-function acceptCookies() {
-  localStorage.setItem("cookiesAccepted", "true");
-  goToAffiliate();
-}
-
-window.addEventListener("load", () => {
-  if (localStorage.getItem("cookiesAccepted")) {
-    const banner = document.getElementById("cookie-banner");
-    if (banner) banner.style.display = "none";
-  }
-});
 
 // COUNTDOWN
-let time = 15 * 60;
+let time = 15 * 60; // 15 minutes
 const timerEl = document.getElementById("timer");
 
 setInterval(() => {
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
-  timerEl.textContent =
-    `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  timerEl.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   if (time > 0) time--;
 }, 1000);
